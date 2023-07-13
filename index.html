@@ -5,37 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malawi Weather</title>
   <link rel="stylesheet" href="style.css">
-</head>
-<style>
-  body {
+  <style>
+    body {
       border: 1px solid #ccc;
       padding: 20px;
       max-width: 1200px; /* Adjust the maximum width as needed */
       margin: 0 auto; /* Center align the page horizontally */
     }
-    
+
     header {
       text-align: center;
     }
-    
+
     header h2 {
       text-decoration: underline;
       color: blue;
     }
-    
-     /* Center align the images container */
-  .weather-statement .image-container {
-    display: flex;
-    justify-content: center;
-  }
 
-  /* Center align each image within the container */
-  .weather-statement .image-container img {
-    display: block;
-    margin: 0 auto;
-  }
-  
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .image-container img {
+      width: 45%; /* Adjust the width as desired */
+      margin-right: 20px;
+       margin-left: 20px;
+       /* Adjust the margin-right value to reduce the space between images */
+    }
+
+    .weather-statement h3:first-of-type {
+      text-align: center;
+    }
+
+    .weather-statement h3:last-of-type {
+      text-align: left;
+    }
+
+    .weather-statement p:first-of-type {
+      text-align: center;
+      font-weight: bold;
+    }
   </style>
+</head>
 <body>
   <header>
     <h2>MINISTRY OF NATURAL RESOURCES AND CLIMATE CHANGE</h2>
@@ -56,9 +69,11 @@
       <p>
         Kamuzu International Airport recorded the lowest minimum temperature of 06° Celsius on 26th June 2023. See figures below highlighting the variation in maximum and minimum temperatures recorded from 26th June to 1st July 2023 compared to July historical temperatures with warmer than average temperatures denoted by the color red.
       </p>
-      <img src="MinTempAnomaly.png" width="500" alt="Weather map">
-      <img src="MaxTempAnomaly.png" width="500" alt="Weather map">
-      <h3>Advisories for the Coming Week</h3>
+     <div class="image-container">
+       <img src="MinTempAnomaly.png" width="500" alt="Weather map">
+       <img src="MaxTempAnomaly.png" width="500" alt="Weather map">
+     </div>
+     <h3>Advisories for the Coming Week</h3>
       <ul>
         <li>Wear warm clothing, particularly the elderly and children.</li>
         <li>Those with asthmatic conditions (mphumu) need to be extra cautious.</li>
@@ -74,7 +89,7 @@
     </section>
   </main>
   <footer>
-    <p>Copyright &copy; 2023 DCCMS Weather</p>
+    <p>&copy; 2023 DCCMS Weather</p>
   </footer>
 </body>
 </html>
