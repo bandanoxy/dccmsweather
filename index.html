@@ -15,24 +15,29 @@
 
     header {
       text-align: center;
+      page-break-after: avoid;
     }
 
     header h2 {
       text-decoration: underline;
-      color: blue;
+      color: red;
+      font-size: 16px;
     }
 
-    .image-container {
+    .logo-container {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
+      justify-content: center;
     }
 
-    .image-container img {
-      width: 45%; /* Adjust the width as desired */
-      margin-right: 30px;
-      margin-left: 30px;
-      /* Adjust the margin-right value to reduce the space between images */
+    .logo-container img {
+      width: 4%;
+      height: 6%;
+      margin-right: 25px;
+      margin-left: 25px;
+    }
+
+    .weather-statement {
+      page-break-inside: avoid;
     }
 
     .weather-statement h3:first-of-type {
@@ -50,66 +55,81 @@
 
     /* New styles for responsiveness */
     @media screen and (max-width: 600px) {
-      .image-container {
+      .logo-container {
         flex-direction: column;
       }
 
-      .image-container img {
+      .logo-container img {
         width: 100%;
         margin-right: 0;
         margin-left: 0;
       }
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      page-break-inside: avoid;
+    }
+
+    .image-container img {
+      max-width: 80%;
+      height: auto;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+
+    .contact-info {
+      font-size: 12px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div style="max-width: 100%;">
-    <img src="mwgovt.png" alt="Met Malawi logo" style="float: left; max-width: 50%;">
-    <h2>MINISTRY OF NATURAL RESOURCES AND CLIMATE CHANGE</h2>
-    <img src="metmwlogo.png" alt="Malawi Govt logo" style="float: right; max-width: 50%;">
+  <div class="logo-container">
+    <img src="mwgovt.png" alt="Met Malawi logo">
+    <h2 style="font-size: 16px;">MINISTRY OF NATURAL RESOURCES AND CLIMATE CHANGE</h2>
+    <img src="metmwlogo.png" alt="Malawi Govt logo">
   </div>
-  <h2 style="max-width: 100%;">DEPARTMENT OF CLIMATE CHANGE AND METEOROLOGICAL SERVICES</h2>
+  <h2 style="max-width: 100%;font-size: 18px;">DEPARTMENT OF CLIMATE CHANGE AND METEOROLOGICAL SERVICES</h2>
 </header>
 
 
-  <main>
-    <section class="weather-statement">
-      <h3>Weekly Weather Statement (10th to 16th July 2023)</h3>
-      <p> </p>
-      <h3>Summary of Weather Ahead</h3>
-      <p>
-        From tomorrow 3rd July until Wednesday 5th July 2023, expect locally cold conditions during nighttime and early morning hours while partly cloudy and generally warm conditions during the daytime. It will also be windy and dusty at times. Mvuma winds are expected to occasionally be blowing over our lake water bodies, including Lake Malawi.
-      </p>
-      <p>
-        As from Thursday 6th July to Sunday 9th July 2023, expect Chiperoni weather accompanied by chilly, windy, and rain drizzle, particularly over highlands. Watch out for locally heavy rain over northern Malawi and foggy conditions in valleys and central highlands. Expect moderate to strong Mwera winds over Lake Malawi and other water bodies by Wednesday evening on 5th July 2023.
-      </p>
-      <h3>Weather During the Past Week</h3>
-      <p>
-        Kamuzu International Airport recorded the lowest minimum temperature of 06° Celsius on 26th June 2023. See figures below highlighting the variation in maximum and minimum temperatures recorded from 26th June to 1st July 2023 compared to July historical temperatures with warmer than average temperatures denoted by the color red.
-      </p>
-     <div class="image-container">
-       <img src="MinTempAnomaly.png" width="500" alt="Weather map">
-       <img src="MaxTempAnomaly.png" width="500" alt="Weather map">
-     </div>
-     <h3>Advisories for the Coming Week</h3>
-      <ul>
-        <li>Wear warm clothing, particularly the elderly and children.</li>
-        <li>Those with asthmatic conditions (mphumu) need to be extra cautious.</li>
-        <li>During foggy conditions, drivers should exercise caution due to reduced visibility.</li>
-        <li>When strong winds occur, fishermen and all other lake users should take extra precautions.</li>
-        <li>Avoid using charcoal burners in poorly ventilated houses.</li>
-      </ul>
-      <p>
-        For further information, please contact: The Director, Department of Climate Change and Meteorological Services, Ministry of Natural Resources and Climate Change, P. O. Box 1808, Blantyre, Malawi. Tel: (265) 882 266 579; Email: <a href="mailto:metdept@metmalawi.gov.mw">metdept@metmalawi.gov.mw</a>, Website: <a href="http://www.metmalawi.gov.mw">www.metmalawi.gov.mw</a>
-      </p>
-      <p>Place of issue: Blantyre</p>
-      <p>Date of issue: Sunday 9th July, 2023</p>
-    </section>
-  </main>
-  <footer>
+<main>
+  <section class="weather-statement">
+    <h3>Weekly Weather Statement (10th to 16th July 2023)</h3>
+    <p> </p>
+    <h3>Summary of Weather Ahead</h3>
+    <p>
+      From tomorrow 3rd July until Wednesday 5th July 2023, expect locally cold conditions during nighttime and early morning hours while partly cloudy and generally warm conditions during the daytime. It will also be windy and dusty at times. Mvuma winds are expected to occasionally be blowing over our lake water bodies, including Lake Malawi.
+    </p>
+    <p>
+      As from Thursday 6th July to Sunday 9th July 2023, expect Chiperoni weather accompanied by chilly, windy, and rain drizzle, particularly over highlands. Watch out for locally heavy rain over northern Malawi and foggy conditions in valleys and central highlands. Expect moderate to strong Mwera winds over Lake Malawi and other water bodies by Wednesday evening on 5th July 2023.
+    </p>
+    <h3>Weather During the Past Week</h3>
+    <p>
+      Kamuzu International Airport recorded the lowest minimum temperature of 06° Celsius on 26th June 2023. See figures below highlighting the variation in maximum and minimum temperatures recorded from 26th June to 1st July 2023 compared to July historical temperatures with warmer than average temperatures denoted by the color red.
+    </p>
+    <div class="image-container">
+      <img src="MinTempAnomaly.png" width="500" alt="Weather map">
+      <img src="MaxTempAnomaly.png" width="500" alt="Weather map">
+    </div>
+    <h3>Advisories for the Coming Week</h3>
+    <ul>
+      <li>Wear warm clothing, particularly the elderly and children.</li>
+      <li>Those with asthmatic conditions (mphumu) need to be extra cautious.</li>
+      <li>During foggy conditions, drivers should exercise caution due to reduced visibility.</li>
+      <li>When strong winds occur, fishermen and all other lake users should take extra precautions.</li>
+      <li>Avoid using charcoal burners in poorly ventilated houses.</li>
+    </ul>
+    <p class="contact-info">Place of issue: Blantyre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date of issue: Sunday 9th July, 2023</p>
+    <p class="contact-info">
+      For further information, please contact: The Director, Department of Climate Change and Meteorological Services,<br>Ministry of Natural Resources and Climate Change,   <br>P. O. Box 1808, Blantyre, Malawi.<br>Tel: (265) 882 266 579;<br>Email: <a href="mailto:metdept@metmalawi.gov.mw">metdept@metmalawi.gov.mw</a>, Website: <a href="http://www.metmalawi.gov.mw">www.metmalawi.gov.mw</a>
+    </p>
     <p>&copy; 2023 DCCMS, National Meteorological Center</p>
-  </footer>
+  </section>
+</main>
+
 </body>
 </html>
